@@ -441,6 +441,37 @@ a.word{text-decoration:none}
 .hero.has-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(6,28,38,.78) 0%,rgba(6,28,38,.45) 45%,rgba(6,28,38,.05) 80%),linear-gradient(90deg,rgba(6,28,38,.55) 0%,rgba(6,28,38,0) 60%)}
 .hero.has-photo svg.scene{visibility:hidden}
 .hero .copy{z-index:2}
+.pic{width:100%;justify-self:stretch;aspect-ratio:4/3}
+.island{grid-template-columns:1.1fr 1fr}
+@media (max-width:900px){ .island{grid-template-columns:1fr} }
+@media (max-width:640px){ .pic{aspect-ratio:16/11} }
+.feature.sunset{border-left-color:var(--sun)}
+.sd-text{display:grid;gap:12px;color:#d5e7ea}
+.sd-text .sd-lead{margin-top:6px}
+.sd-hl{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 16px}
+.shipday{margin-top:56px;display:grid;gap:18px}
+.shipday h3{font:700 clamp(22px,3vw,32px)/1.15 var(--f-display);text-transform:uppercase}
+.shipday h3 em{font:500 italic .95em/1.2 var(--f-serif);text-transform:none;color:var(--sun);display:block;margin-top:8px}
+.sh-lead{color:#c3dde1;max-width:62ch;font-size:17px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stats div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px;display:grid;gap:4px}
+.stats b{font:800 clamp(30px,4vw,44px)/1 var(--f-display);color:var(--sun);font-variant-numeric:tabular-nums}
+.stats span{color:#c3dde1;font-size:14px;line-height:1.35}
+.sh-note{color:#a8c4ca;font-style:italic}
+.sh-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 32px;color:#d5e7ea}
+.sh-grid b{color:#fff}
+.sh-q{font:500 italic clamp(22px,2.8vw,30px)/1.3 var(--f-serif);color:#ffe2c2;margin-top:10px}
+.sh-ways{list-style:none;margin:0;padding:0;display:grid;gap:6px;font:500 18px/1.4 var(--f-serif);color:#e9f3f4}
+.sh-ways li::before{content:"— ";color:var(--sun)}
+.sh-final{font:700 clamp(20px,2.6vw,28px)/1.25 var(--f-display);text-transform:uppercase;color:#fff;max-width:28ch}
+@media (max-width:900px){ .stats{grid-template-columns:1fr 1fr} .sh-grid{grid-template-columns:1fr} }
+@media (max-width:640px){ .shipday{margin-top:36px} .stats div{padding:14px} .sh-final{font-size:20px} }
+.seaday h2{font-size:clamp(22px,2.8vw,32px)}
+.pics{display:grid;gap:14px;align-self:start;min-width:0}
+.island:nth-of-type(even) .pics{order:2}
+.pic2{background:var(--chip)}
+@media (max-width:900px){ .island:nth-of-type(even) .pics{order:0} }
+@media (max-width:640px){ .pics{grid-template-columns:1fr 1fr;gap:8px} .pics .pic{aspect-ratio:4/5} }
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .bob{animation:bob 6s ease-in-out infinite}
 </style>
@@ -768,7 +799,7 @@ a.word{text-decoration:none}
 
     <!-- 24–25 ТФ -->
     <section class="island" id="d-tf">
-      <div class="pic">
+      <div class="pics"><div class="pic">
         <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-label="Иллюстрация: туманный лес Анага">
           <rect width="500" height="400" fill="#c9dccf"/>
           <path d="M0 150 L90 90 L170 140 L260 70 L360 130 L440 80 L500 110 L500 400 L0 400Z" fill="#7aa588"/>
@@ -783,8 +814,8 @@ a.word{text-decoration:none}
           <rect y="250" width="500" height="34" fill="#e4eee8" opacity=".45"/>
           <path d="M200 400 Q230 360 220 330 Q240 360 260 400Z" fill="#c9b38a"/>
         </svg>
-        <img src="https://i.postimg.cc/SNk9B2HQ/photo-2026-10-01-19-32-26.jpg" alt="Тенерифе" loading="lazy" onerror="this.remove()">
-      </div>
+        <img src="https://i.postimg.cc/gJqz8Dd8/photo-2026-10-01-20-09-28.jpg" alt="Тенерифе" loading="lazy" onerror="this.remove()">
+      </div><div class="pic pic2"><img src="https://i.postimg.cc/SNk9B2HQ/photo-2026-10-01-19-32-26.jpg" alt="Тенерифе" loading="lazy" onerror="this.parentNode.remove()"></div></div>
       <div>
         <p class="num">24–25 января · Санта-Крус · 🕗 прибытие 24.01 в 08:00 · 🛳 отправление 25.01 в 22:00</p>
         <h2>Тенерифе</h2>
@@ -794,7 +825,15 @@ a.word{text-decoration:none}
           <p class="eyebrow">🌳 Волшебный лес Тенерифе</p>
           <h3>Анага — место, куда хочется попасть из сказки</h3>
           <p>Туман, влажный воздух, мох, папоротники, древние деревья, извилистые тропы — и ощущение, будто ты попал в другой мир. Лаурисильва — реликтовый субтропический лес, сохранившийся в районах Анага и Тено с третичного периода. <a class="src" href="https://www.webtenerife.com/tenerife/la-isla/fauna-flora/flora/laurisilva/" target="_blank" rel="noopener">Web Tenerife ↗</a></p>
-          <p>Анага — биосферный резерват ЮНЕСКО с 2015 года: горы уходят прямо к океану, между ними ущелья, бухты и пляжи с тёмным вулканическим песком. <a class="src" href="https://www.spain.info/ru/priroda/biosfernyi-zapovednik-massiv-anaga/" target="_blank" rel="noopener">Spain.info ↗</a></p>
+
+        </div>
+        <div class="feature sunset">
+          <p class="eyebrow">🌋 Тенерифе — место встречи с закатом</p>
+          <p>Представьте: вы поднимаетесь на высоту около 3000 метров над уровнем моря — выше облаков, туда, где меняется само ощущение пространства.</p>
+          <p>Внизу остаётся остров, облака превращаются в белое море, а перед вами — вулканический ландшафт и бескрайний горизонт.</p>
+          <h3>И именно здесь мы встретим закат.</h3>
+          <p>На высоте, где кажется, что ты оказался ближе к небу. ✨</p>
+          <p>На Тенерифе нас ждёт тот самый момент, который невозможно просто сфотографировать — его хочется прожить.</p>
         </div>
         <div class="chips" data-island="Тенерифе">
           <button class="chip" aria-pressed="false">🌿 Лес Лаурисильва</button>
@@ -821,7 +860,7 @@ a.word{text-decoration:none}
 
     <!-- 26 ЛЗ -->
     <section class="island" id="d-lz">
-      <div class="pic">
+      <div class="pics"><div class="pic">
         <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-label="Иллюстрация: вулканы Лансароте">
           <rect width="500" height="400" fill="#f3c9a0"/>
           <circle cx="380" cy="110" r="44" fill="#fff1dc"/>
@@ -832,7 +871,7 @@ a.word{text-decoration:none}
           <rect y="370" width="500" height="30" fill="#1a3a48"/>
         </svg>
         <img src="https://i.postimg.cc/fR7rw9RK/lansarote-ispaniya-02.jpg" alt="Лансароте" loading="lazy" onerror="this.remove()">
-      </div>
+      </div><div class="pic pic2"><img src="https://i.postimg.cc/FH7H83gY/photo-2026-10-01-20-09-07.jpg" alt="Лансароте" loading="lazy" onerror="this.parentNode.remove()"></div></div>
       <div>
         <p class="num">26 января · Арресифе · 09:00–19:00</p>
         <h2>Лансароте</h2>
@@ -858,22 +897,23 @@ a.word{text-decoration:none}
   <section class="seaday" id="d-sea">
     <div class="wrap sd-grid">
       <div>
-        <p class="eyebrow">🌊 27 января · День в океане</p>
-        <h2>Наконец день, когда никуда не нужно спешить</h2>
-        <p class="sd-lead">После нескольких островов не нужно вставать по будильнику ради экскурсии. И главное — ваша каюта остаётся вашим домом.</p>
+        <p class="eyebrow">🌊 27 января — день в океане</p>
+        <h2>Наконец день, который полностью принадлежит океану и самому путешествию</h2>
       </div>
-      <ul class="sd-list">
-        <li>☕ Долго завтракать</li><li>🏊 Плавать</li><li>🧘 Пойти в SPA</li>
-        <li>🏋️ Заняться спортом</li><li>📖 Читать у океана</li><li>🍹 Встретиться с друзьями</li>
-        <li>🎭 Вечером — шоу</li><li>🎶 Слушать музыку</li><li>🌅 Смотреть, как меняется океан</li>
-      </ul>
+      <div class="sd-text">
+        <p>Мы в открытом океане, и этот день посвящаем знакомству с нашим лайнером Costa Smeralda.</p>
+        <p>А лайнер — это не просто корабль. Это настоящий город на воде: рестораны и бары, театры и шоу, бассейны, магазины, развлечения, зоны отдыха и даже казино.</p>
+        <p>Будет время спокойно всё рассмотреть, выбрать свои любимые места, познакомиться с инфраструктурой корабля и просто наслаждаться атмосферой круиза.</p>
+        <p class="sd-hl">🛍️ А ещё это отличная возможность воспользоваться специальными предложениями и скидками, которые действуют на борту, и открыть для себя всё, что предлагает Costa Smeralda.</p>
+        <p class="sd-lead">Океан за бортом, целый город под ногами — и день, который хочется прожить красиво. 🚢✨</p>
+      </div>
     </div>
   </section>
 
   <div class="wrap">
     <!-- 28 МД -->
     <section class="island" id="d-md">
-      <div class="pic">
+      <div class="pics"><div class="pic">
         <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-label="Иллюстрация: зелёные горы и водопад Мадейры">
           <rect width="500" height="400" fill="#bfe3e6"/>
           <path d="M0 120 L140 60 L260 110 L380 40 L500 90 L500 400 L0 400Z" fill="#3f7a4d"/>
@@ -888,7 +928,7 @@ a.word{text-decoration:none}
           <rect y="352" width="500" height="48" fill="#0e4c63"/>
         </svg>
         <img src="https://i.postimg.cc/fywbrXkn/photo-2026-10-01-19-33-32.jpg" alt="Мадейра" loading="lazy" onerror="this.remove()">
-      </div>
+      </div><div class="pic pic2"><img src="https://i.postimg.cc/44Qy9JxG/photo-2026-10-01-20-08-41.jpg" alt="Мадейра" loading="lazy" onerror="this.parentNode.remove()"></div></div>
       <div>
         <p class="num">28 января · Фуншал · 07:00–15:00</p>
         <h2>Мадейра</h2>
@@ -945,17 +985,35 @@ a.word{text-decoration:none}
         <div><span class="ic">👨‍👩‍👧</span><b>Пространства для семей</b></div>
       </div>
       <p class="ship-note">🌅 Панорамные зоны с видом на океан. То есть даже когда мы не гуляем по острову, путешествие продолжается.</p>
-      <div class="dayline">
-        <h3>Один день <em>на Costa Smeralda</em></h3>
-        <div class="clock">
-          <div class="slot" style="--c:#f3c18b"><time>08:00</time><i></i><div><b>Завтрак с видом на океан</b></div></div>
-          <div class="slot" style="--c:#8fc7cf"><time>10:00</time><i></i><div><b>Бассейн или SPA</b></div></div>
-          <div class="slot" style="--c:#f3c18b"><time>13:00</time><i></i><div><b>Обед</b></div></div>
-          <div class="slot" style="--c:#8fc7cf"><time>15:00</time><i></i><div><b>Развлечения или отдых</b></div></div>
-          <div class="slot" style="--c:#f0a45a"><time>18:00</time><i></i><div><b>Закат</b><small>Лучшее время выйти на палубу</small></div></div>
-          <div class="slot" style="--c:#e0795e"><time>20:00</time><i></i><div><b>Ужин</b></div></div>
-          <div class="slot" style="--c:#c9a3e0"><time>22:00</time><i></i><div><b>Шоу</b></div></div>
+      <div class="shipday">
+        <h3>🚢 День на Costa Smeralda <em>целый город посреди океана</em></h3>
+        <p class="sh-lead">Сегодня мы остаёмся на борту Costa Smeralda и наконец можем по-настоящему познакомиться с нашим лайнером. А знакомиться здесь есть с чем:</p>
+        <div class="stats">
+          <div><b>20</b><span>палуб</span></div>
+          <div><b>13</b><span>бассейнов и гидромассажных зон</span></div>
+          <div><b>11</b><span>ресторанов и снек-баров</span></div>
+          <div><b>19</b><span>баров и лаунжей</span></div>
         </div>
+        <p class="sh-note">И это только цифры.</p>
+        <div class="sh-grid">
+          <p>Начнём утро с кофе и вида на бескрайний океан. Можно отправиться на прогулку по палубам, подняться на Volare Skywalk и посмотреть на море с высоты.</p>
+          <p>🏊‍♀️ <b>Захочется движения</b> — бассейны, джакузи, аквапарк с водными горками, спортивные площадки, тренажёрный зал с панорамным видом на море, йога, фитнес и беговая дорожка.</p>
+          <p>💆‍♀️ <b>Захочется полного расслабления</b> — Solemio Spa площадью 4500 м²: сауна, хаммам, талассотерапевтический бассейн, соляная и снежная комнаты, зоны отдыха, массажи и другие процедуры.</p>
+          <p>🍕 <b>А дальше начинается гастрономическое путешествие.</b> Пицца в Pummid’Oro, суши в Sushino, Teppanyaki, мороженое в Gelateria Amarillo, зона Nutella, аперитив в Aperol Spritz Bar, вино в Frescobaldi Wine Experience. Всего на борту — 11 ресторанов и снек-баров и 19 баров и лаунжей.</p>
+          <p>🎨 Можно заглянуть в <b>CoDe</b> — музей итальянского дизайна, пройтись по магазинам, сделать фотографии, поиграть, познакомиться с другими путешественниками или просто найти своё любимое место на корабле.</p>
+          <p>А вечером лайнер превращается в совершенно другой мир. 🎭 Нас ждут шоу и представления в <b>Colosseo</b>, музыка, бары, театр, дискотека, казино и другие развлечения. На Costa развлечения проходят в течение всего дня, а вечером программа продолжается на сценах и в тематических пространствах.</p>
+        </div>
+        <p class="sh-q">И самое интересное — не существует одного правильного сценария этого дня.</p>
+        <ul class="sh-ways">
+          <li>Можно провести его у бассейна.</li>
+          <li>Можно устроить себе гастрономический марафон.</li>
+          <li>Можно посвятить день Spa.</li>
+          <li>Можно заниматься спортом.</li>
+          <li>Можно исследовать корабль палуба за палубой.</li>
+          <li>Можно танцевать до ночи.</li>
+          <li>А можно просто выйти на палубу, смотреть на океан и осознать:</li>
+        </ul>
+        <p class="sh-final">мы посреди Атлантики, а вокруг нас — целый город, который плывёт вместе с нами. 🌊🚢✨</p>
       </div>
     </div>
   </section>
@@ -1009,15 +1067,19 @@ a.word{text-decoration:none}
           <li>Заходы в порты по маршруту</li>
           <li>Чаевые</li>
         </ul></div>
-        <div class="no"><h3>Оплачивается дополнительно</h3><ul>
+        <div class="no"><h3>💳 Дополнительно оплачивается</h3><ul>
           <li>Перелёт до Гран-Канарии и обратно</li>
-          <li>Экскурсии на островах</li>
-          <li>Напитки (или пакет напитков)</li>
-          <li>SPA-процедуры и тематические рестораны</li>
-          <li>Wi-Fi и страховка</li>
+          <li>Необходимый трансфер</li>
+          <li>Ночь в отеле на Гран-Канарии перед посадкой на лайнер</li>
+          <li>Экскурсии на островах — по желанию</li>
+          <li>Алкогольные напитки и/или пакет напитков</li>
+          <li>SPA-процедуры</li>
+          <li>Посещение некоторых тематических ресторанов</li>
+          <li>Wi-Fi на борту</li>
+          <li>Туристическая страховка</li>
         </ul></div>
       </div>
-      <p class="fine">Полный список расходов пришлю до бронирования.</p>
+      <p class="fine">Остальное — уже включено в стоимость круиза согласно выбранному тарифу.</p>
     </div>
   </section>
 
