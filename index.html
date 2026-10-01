@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0b2a3a">
-<title>Анна Курявська — психолог и путешествия</title>
-<meta name="description" content="Анна Курявська: психолог, физиогномист, организатор ретритов и совместных путешествий. Круиз Канары + Мадейра на Costa Smeralda, 22–29 января 2027.">
+<title>Анна Курявская — психолог и путешествия</title>
+<meta name="description" content="Анна Курявская: психолог, физиогномист, организатор ретритов и совместных путешествий. Круиз Канары + Мадейра на Costa Smeralda, 22–29 января 2027.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,500&family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;700;800&display=swap">
 <style>
@@ -435,6 +435,7 @@ a.word{text-decoration:none}
 @media (max-width:640px){ .promo-pic{min-height:200px;aspect-ratio:16/10;height:auto} .promo svg{max-height:none} }
 .cabin .t{min-height:28px}
 .cabin .badge{line-height:1.2}
+.pic > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .bob{animation:bob 6s ease-in-out infinite}
 </style>
@@ -445,7 +446,7 @@ a.word{text-decoration:none}
 
 <header class="bar">
   <div class="wrap">
-    <button class="brand" data-go="home">Анна Курявська · психолог</button>
+    <button class="brand" data-go="home">Анна Курявская · психолог</button>
     <nav class="nav" aria-label="Разделы">
       <button data-go="home" data-anchor="about">Обо мне</button>
       <button data-go="home" data-anchor="services">Консультации</button>
@@ -459,10 +460,10 @@ a.word{text-decoration:none}
 <main id="view-home">
   <div class="wrap psy">
     <section class="card" id="about">
-      <figure class="portrait"><img src="https://i.postimg.cc/y8K2jFPb/photo-2026-10-01-13-23-51.jpg" alt="Анна Курявська, психолог" onerror="this.remove()"><span>АК</span></figure>
+      <figure class="portrait"><img src="https://i.postimg.cc/y8K2jFPb/photo-2026-10-01-13-23-51.jpg" alt="Анна Курявская, психолог" onerror="this.remove()"><span>АК</span></figure>
       <div>
         <p class="eyebrow">Психолог · онлайн и очно</p>
-        <h1>Анна Курявська</h1>
+        <h1>Анна Курявская</h1>
         <p class="role">Психолог, физиогномист, организатор ретритов и совместных путешествий</p>
         <blockquote class="motto"><p><b>Психология</b> — чтобы встретиться с собой.</p><p><b>Путешествия</b> — чтобы увидеть, насколько больше может быть твоя жизнь.</p></blockquote>
         <div class="tags"><span>Тревога и стресс</span><span>Отношения</span><span>Самооценка</span><span>Кризисы и перемены</span><span>Выгорание</span></div>
@@ -711,7 +712,7 @@ a.word{text-decoration:none}
           <rect y="344" width="500" height="56" fill="#1c6b82"/>
           <g stroke="#cfe9ea" stroke-width="2" fill="none"><path d="M40 364 q15 -6 30 0 t30 0"/><path d="M320 378 q15 -6 30 0 t30 0"/></g>
         </svg>
-        <span class="cap">Здесь будет фото Лас-Пальмаса</span>
+        <img src="https://i.postimg.cc/9fKTKxHs/photo-2026-10-01-19-31-00.jpg" alt="Лас-Пальмас, Гран-Канария" loading="lazy" onerror="this.remove()">
       </div>
       <div>
         <p class="num">22 января · Лас-Пальмас · 🛳 отправление 22:00</p>
@@ -773,7 +774,7 @@ a.word{text-decoration:none}
           <rect y="250" width="500" height="34" fill="#e4eee8" opacity=".45"/>
           <path d="M200 400 Q230 360 220 330 Q240 360 260 400Z" fill="#c9b38a"/>
         </svg>
-        <span class="cap">Здесь будет фото леса Анага</span>
+        <img src="https://i.postimg.cc/SNk9B2HQ/photo-2026-10-01-19-32-26.jpg" alt="Тенерифе" loading="lazy" onerror="this.remove()">
       </div>
       <div>
         <p class="num">24–25 января · Санта-Крус · 🕗 прибытие 24.01 в 08:00 · 🛳 отправление 25.01 в 22:00</p>
@@ -877,7 +878,7 @@ a.word{text-decoration:none}
           <g fill="#e9719a"><circle cx="150" cy="330" r="6"/><circle cx="170" cy="340" r="5"/><circle cx="460" cy="330" r="6"/></g>
           <rect y="352" width="500" height="48" fill="#0e4c63"/>
         </svg>
-        <span class="cap">Здесь будет большое фото Мадейры</span>
+        <img src="https://i.postimg.cc/fywbrXkn/photo-2026-10-01-19-33-32.jpg" alt="Мадейра" loading="lazy" onerror="this.remove()">
       </div>
       <div>
         <p class="num">28 января · Фуншал · 07:00–15:00</p>
@@ -1040,7 +1041,7 @@ a.word{text-decoration:none}
 </main>
 
 <button class="mcta off" id="mcta" data-scroll="final" aria-label="Хочу в круиз">Хочу в круиз →</button>
-<footer><div class="wrap">© 2026 · Анна Курявська, психолог</div></footer>
+<footer><div class="wrap">© 2026 · Анна Курявская, психолог</div></footer>
 
 <script>
 (function(){
