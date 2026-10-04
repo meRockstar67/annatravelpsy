@@ -472,6 +472,144 @@ a.word{text-decoration:none}
 .pic2{background:var(--chip)}
 @media (max-width:900px){ .island:nth-of-type(even) .pics{order:0} }
 @media (max-width:640px){ .pics{grid-template-columns:1fr 1fr;gap:8px} .pics .pic{aspect-ratio:4/5} }
+
+/* ===== Физиогномика ===== */
+:root{--rose:#b0466a;--plum:#2a1630;--plum2:#4a2340;--blush:#f6e7ec}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--rose:#ec8fab;--blush:#2a1a24} }
+:root[data-theme="dark"]{--rose:#ec8fab;--blush:#2a1a24}
+.nav .physio-btn.on{background:var(--plum2);border-color:var(--plum2);color:#fff}
+.physio{--ph-ink:#fbeff3}
+.ph-hero{background:radial-gradient(120% 90% at 85% 20%,#7a3555 0%,rgba(122,53,85,0) 55%),linear-gradient(160deg,#2a1630 0%,#3d1d38 55%,#1d1124 100%);color:var(--ph-ink);padding-block:64px 56px;overflow:hidden}
+.ph-hero .eyebrow{color:#e9b8c8}
+.ph-hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:center}
+.ph-hero h1{font:800 clamp(38px,6.6vw,84px)/.95 var(--f-display);text-transform:uppercase;margin-top:16px;letter-spacing:-.01em}
+.ph-sub{font:500 italic clamp(22px,3vw,32px)/1.25 var(--f-serif);margin-top:16px;max-width:30ch;color:#ffd9e4}
+.ph-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.ph-facts span{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:500}
+.ph-seats{display:inline-flex;align-items:center;gap:10px;margin-top:20px;font-weight:700;color:#ffb38a;font-size:15px}
+.ph-seats i{width:9px;height:9px;border-radius:50%;background:#ff7a59;box-shadow:0 0 0 0 rgba(255,122,89,.7);animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,122,89,.6)}80%,100%{box-shadow:0 0 0 10px rgba(255,122,89,0)}}
+.ph-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ph-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#ec8fab;color:#2a1630;border:0;border-radius:999px;padding:17px 26px;font:700 15px/1 var(--f-display);text-transform:uppercase;letter-spacing:.03em;cursor:pointer;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .2s}
+.ph-cta:hover{transform:translateY(-2px)}
+.ph-ghost{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:999px;padding:16px 22px;font-weight:600;cursor:pointer}
+.ph-face{width:100%;height:auto;max-width:320px;justify-self:center;color:#f3c7d5}
+.ph-dots circle{fill:#ec8fab}
+.ph-dots text{fill:#2a1630}
+.ph-intro-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+.ph-q{font:500 italic clamp(28px,4vw,46px)/1.15 var(--f-serif)}
+.ph-text{display:grid;gap:14px;font-size:17px}
+.ph-quote{margin:4px 0;padding:14px 20px;border-left:3px solid var(--rose);background:var(--blush);border-radius:0 14px 14px 0;font:500 italic clamp(20px,2.4vw,26px)/1.3 var(--f-serif)}
+.ph-quote.big{font-size:clamp(22px,3vw,32px)}
+.ph-lines b{color:var(--rose)}
+.ph-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.ph-cards article{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
+.ph-ic{font-size:26px}
+.ph-cards h3{font:700 18px/1.2 var(--f-display);text-transform:uppercase}
+.ph-cards p{color:var(--muted)}
+.ph-qs{list-style:none;margin:0;padding:0;display:grid;gap:4px;font:500 italic 19px/1.35 var(--f-serif)}
+.ph-qs li::before{content:"— ";color:var(--rose)}
+.ph-love-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
+.ph-h2{font:700 clamp(24px,3.4vw,38px)/1.1 var(--f-display);text-transform:uppercase;margin-top:10px}
+.ph-hearts{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:8px}
+.ph-hearts li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 16px 12px 44px;position:relative;font-weight:500}
+.ph-hearts li::before{content:"❤️";position:absolute;left:14px;top:11px;font-size:16px}
+.ph-pro{background:var(--plum);color:#f5e6ec;border-radius:20px;padding:24px;display:grid;gap:10px}
+.ph-pro .eyebrow{color:#e9b8c8}
+.ph-pro b{color:#fff}
+.ph-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ph-steps li{display:grid;grid-template-columns:64px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px}
+.ph-steps .n{font:800 34px/1 var(--f-display);color:var(--rose);font-variant-numeric:tabular-nums}
+.ph-steps h3{font:700 18px/1.2 var(--f-display);text-transform:uppercase}
+.ph-steps .qq{font:500 italic 20px/1.3 var(--f-serif);margin:6px 0 8px;color:var(--ink)}
+.ph-steps p{color:var(--muted);font-size:15px}
+.ph-steps p+p{margin-top:8px}
+.ph-steps li.last{grid-column:1/-1;background:var(--plum);border-color:var(--plum);color:#f5e6ec}
+.ph-steps li.last p,.ph-steps li.last .qq{color:#f5e6ec}
+.ph-steps li.last .n{color:#ec8fab}
+.ph-narrow{max-width:760px;display:grid;gap:14px;font-size:17px}
+.ph-big{font:500 italic clamp(26px,3.6vw,40px)/1.2 var(--f-serif)}
+.ph-big.accent{color:var(--rose)}
+.ph-stack{font:600 19px/1.6 var(--f-body);border-left:2px solid var(--rose);padding-left:16px}
+.ph-not{background:var(--blush);border-radius:24px;padding:clamp(22px,4vw,40px)}
+.ph-not-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;margin-top:18px;font-size:17px}
+.ph-tiles{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.ph-tiles div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:4px;align-content:start}
+.ph-tiles span{font-size:22px}
+.ph-tiles b{font-weight:700}
+.ph-tiles small{color:var(--muted);font-size:13px}
+.ph-note{margin-top:16px;font-weight:600;color:var(--rose)}
+.ph-why{margin-top:22px;display:grid;gap:8px;max-width:70ch}
+.ph-why h3{font:700 18px/1.2 var(--f-display);text-transform:uppercase}
+.ph-author-grid{display:grid;grid-template-columns:300px 1fr;gap:40px;align-items:center}
+.ph-author-grid > div{display:grid;gap:10px;font-size:17px}
+.ph-photo{position:relative;margin:0;aspect-ratio:4/5;border:2px solid var(--rose);border-radius:24px;overflow:hidden;background:var(--blush);display:grid;place-items:center;font:500 48px/1 var(--f-serif);color:var(--rose)}
+.ph-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.ph-roles{color:var(--rose);font-weight:600}
+.ph-about{font:500 italic 24px/1.3 var(--f-serif)}
+.ph-manifest{background:linear-gradient(180deg,var(--bg),var(--blush));padding-block:72px}
+.ph-so{list-style:none;margin:6px 0;padding:0;display:grid;gap:8px}
+.ph-so li{padding-left:22px;position:relative}
+.ph-so li::before{content:"✦";position:absolute;left:0;color:var(--rose)}
+.ph-final{font:700 clamp(20px,2.6vw,28px)/1.25 var(--f-display);text-transform:uppercase;margin-top:10px}
+.ph-sum-card{background:linear-gradient(140deg,#2a1630,#5a2648);color:#fbeff3;border-radius:28px;padding:clamp(28px,5vw,56px);display:grid;gap:12px;justify-items:start}
+.ph-sum-card h2{font:800 clamp(34px,6vw,64px)/1 var(--f-display);text-transform:uppercase}
+.ph-sum-card .ph-seats{margin-top:4px}
+.ph-sum-facts{font-weight:600;line-height:1.6}
+.ph-prices{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ph-pc{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:grid;gap:10px;align-content:start}
+.ph-pc .amt{font:800 clamp(36px,5vw,52px)/1 var(--f-display);font-variant-numeric:tabular-nums}
+.ph-pc .amt small{font:600 18px/1 var(--f-body);color:var(--muted)}
+.ph-pc.best{border-color:var(--rose);box-shadow:0 0 0 3px color-mix(in srgb,var(--rose) 22%,transparent)}
+.ph-pc.best .amt{color:var(--rose)}
+.ph-pc .save{display:inline-block;justify-self:start;background:var(--rose);color:#fff;font-weight:700;border-radius:999px;padding:6px 14px}
+.ph-parts{color:var(--muted);font-size:15px;border-top:1px solid var(--line);padding-top:12px}
+.ph-incl{margin-top:16px;border:1px solid var(--line);border-radius:20px;padding:24px;background:color-mix(in srgb,var(--leaf) 9%,var(--surface))}
+.ph-incl h3{font:700 16px/1.2 var(--f-display);text-transform:uppercase;margin-bottom:12px}
+.ph-incl ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
+.ph-incl li::before{content:"✓";color:var(--leaf);font-weight:700;margin-right:10px}
+.ph-book{margin-top:32px;text-align:center;display:grid;gap:12px;justify-items:center}
+.ph-contact{color:var(--muted);font-size:14px}
+.promo2{border-radius:24px;padding:clamp(22px,4vw,40px);background:linear-gradient(130deg,#2a1630,#5a2648);color:#fbeff3;display:grid;grid-template-columns:1.4fr auto;gap:24px;align-items:center}
+.promo2 .eyebrow{color:#e9b8c8}
+.promo2 h2{font:800 clamp(26px,4vw,40px)/1 var(--f-display);text-transform:uppercase;margin:10px 0}
+.promo2 p{color:#f0d7e0;max-width:52ch}
+.promo2-act{display:grid;gap:12px;justify-items:start}
+.promo2 .ph-seats{margin:0}
+.promo2 .btn{background:#ec8fab;border-color:#ec8fab;color:#2a1630}
+@media (max-width:900px){
+  .ph-hero-grid,.ph-intro-grid,.ph-love-grid{grid-template-columns:minmax(0,1fr)}
+  .ph-face{max-width:220px;order:-1;justify-self:start}
+  .ph-steps{grid-template-columns:1fr}
+  .ph-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ph-author-grid{grid-template-columns:200px 1fr;gap:24px}
+  .promo2{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .ph-hero{padding-block:32px 40px}
+  .ph-face{display:none}
+  .ph-hero h1{font-size:clamp(26px,8.6vw,44px)}
+  .ph-cards,.ph-not-grid,.ph-prices,.ph-incl ul,.ph-author-grid{min-width:0}
+  .physio .wrap > *{min-width:0}
+  .ph-facts span{font-size:13px;padding:6px 11px}
+  .ph-actions{display:grid;grid-template-columns:1fr}
+  .ph-cta,.ph-ghost{width:100%}
+  .ph-cards,.ph-not-grid,.ph-prices,.ph-incl ul{grid-template-columns:1fr}
+  .ph-cards article{padding:20px}
+  .ph-steps li{grid-template-columns:44px 1fr;gap:12px;padding:16px}
+  .ph-steps .n{font-size:26px}
+  .ph-tiles{grid-template-columns:1fr 1fr}
+  .ph-author-grid{grid-template-columns:1fr}
+  .ph-photo{max-width:220px}
+  .ph-manifest{padding-block:48px}
+  .ph-sum-card{grid-template-columns:minmax(0,1fr);justify-items:stretch}
+  .ph-sum-card h2{font-size:clamp(24px,8vw,44px)}
+  .ph-sum-card .ph-seats{justify-self:start}
+  .ph-book{justify-items:stretch}
+  .ph-sum-card .ph-cta,.ph-book .ph-cta{width:auto}
+  .promo2 .btn{width:100%;justify-content:center}
+  .promo2-act{justify-items:stretch}
+}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .bob{animation:bob 6s ease-in-out infinite}
 </style>
@@ -487,6 +625,7 @@ a.word{text-decoration:none}
       <button data-go="home" data-anchor="about">Обо мне</button>
       <button data-go="home" data-anchor="services">Консультации</button>
       <button data-go="cruise" class="cruise-btn">🚢 Круиз</button>
+      <button data-go="physio" class="physio-btn">Физиогномика</button>
       <button data-go="home" data-anchor="contacts">Контакты</button>
     </nav>
   </div>
@@ -550,6 +689,15 @@ a.word{text-decoration:none}
         </g>
         <g stroke="#1b7f8f" stroke-width="2" fill="none" opacity=".8"><path d="M20 200 q20 -8 40 0 t40 0"/><path d="M230 228 q20 -8 40 0 t40 0"/></g>
       </svg><img src="https://i.postimg.cc/HLcKsBsb/costa-smeralda.jpg" alt="Лайнер Costa Smeralda" loading="lazy" onerror="this.remove()"></div>
+    </section>
+
+    <section class="promo2">
+      <div>
+        <p class="eyebrow">Онлайн-курс · старт 14 октября</p>
+        <h2>Физиогномика</h2>
+        <p>Научитесь видеть человека глубже — и выбирать не только глазами. 10 онлайн-занятий в мини-группе, записи навсегда.</p>
+      </div>
+      <div class="promo2-act"><span class="ph-seats"><i></i>Осталось 1–2 места</span><button class="btn" data-go="physio">Подробнее о курсе →</button></div>
     </section>
 
     <section id="contacts">
@@ -1111,27 +1259,286 @@ a.word{text-decoration:none}
   </section>
 </main>
 
+<!-- ================= ФИЗИОГНОМИКА ================= -->
+<main id="view-physio" class="physio" hidden>
+  <section class="ph-hero">
+    <div class="wrap ph-hero-grid">
+      <div class="ph-hero-copy">
+        <p class="eyebrow">Онлайн-курс · Анна Курявская</p>
+        <h1>Физиогномика</h1>
+        <p class="ph-sub">Научитесь видеть человека глубже — и выбирать не только глазами</p>
+        <div class="ph-facts">
+          <span>📅 Старт — 14 октября</span>
+          <span>👥 Мини-группа 4–5 человек</span>
+          <span>💻 10 онлайн-занятий по 2 часа</span>
+          <span>🎥 Записи остаются у вас навсегда</span>
+        </div>
+        <p class="ph-seats"><i></i>Осталось 1–2 места</p>
+        <div class="ph-actions">
+          <button class="ph-cta" data-scroll="ph-price">Хочу в группу →</button>
+          <button class="ph-ghost" data-scroll="ph-program">Программа курса</button>
+        </div>
+      </div>
+      <svg class="ph-face" viewBox="0 0 320 400" aria-label="Схема зон лица: 10 занятий курса">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".85">
+          <path d="M160 40 C95 40 70 95 72 160 C74 225 92 285 122 318 C138 336 150 342 160 342 C170 342 182 336 198 318 C228 285 246 225 248 160 C250 95 225 40 160 40Z"/>
+          <path d="M72 168 C60 166 56 182 60 198 C64 214 72 222 80 220"/>
+          <path d="M248 168 C260 166 264 182 260 198 C256 214 248 222 240 220"/>
+          <path d="M102 150 Q120 140 140 148"/><path d="M180 148 Q200 140 218 150"/>
+          <path d="M106 176 Q122 166 138 176 Q122 184 106 176Z"/><path d="M182 176 Q198 166 214 176 Q198 184 182 176Z"/>
+          <path d="M160 168 L152 230 Q160 238 170 230"/>
+          <path d="M132 268 Q160 258 188 268 Q160 286 132 268Z"/>
+          <path d="M124 342 L120 392"/><path d="M196 342 L200 392"/>
+        </g>
+        <g class="ph-dots" font-family="Onest, system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+          <g transform="translate(160 312)"><circle r="11"/><text y="4">03</text></g>
+          <g transform="translate(160 270)"><circle r="11"/><text y="4">04</text></g>
+          <g transform="translate(104 238)"><circle r="11"/><text y="4">05</text></g>
+          <g transform="translate(176 208)"><circle r="11"/><text y="4">06</text></g>
+          <g transform="translate(122 176)"><circle r="11"/><text y="4">07</text></g>
+          <g transform="translate(160 104)"><circle r="11"/><text y="4">08</text></g>
+          <g transform="translate(262 194)"><circle r="11"/><text y="4">09</text></g>
+          <g transform="translate(160 372)"><circle r="11"/><text y="4">02</text></g>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="block ph-intro">
+    <div class="wrap ph-intro-grid">
+      <h2 class="ph-q">А что, если научиться лучше видеть не только других, но и себя?</h2>
+      <div class="ph-text">
+        <p>Мы часто выбираем партнёров глазами. Влюбляемся в голос, улыбку, энергию, внешность.</p>
+        <p>А потом обнаруживаем:</p>
+        <blockquote class="ph-quote">«Как же я могла этого не заметить?»</blockquote>
+        <p>Физиогномика помогает развить навык наблюдения за человеком и замечать особенности, которые могут быть важны в общении, близости и отношениях.</p>
+        <p class="ph-lines">Не для того, чтобы навешивать ярлыки.<br>А чтобы <b>видеть больше</b>. <b>Чувствовать точнее</b>. <b>Задавать правильные вопросы</b>. И делать свои выборы осознаннее.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block ph-for">
+    <div class="wrap">
+      <div class="block-h"><p class="eyebrow">❤️ Этот курс — прежде всего для себя</p><h2>Для женщины, которая хочет</h2></div>
+      <div class="ph-cards">
+        <article>
+          <span class="ph-ic">❤️</span>
+          <h3>Любить и выбирать осознаннее</h3>
+          <p>Лучше понимать, кто перед вами, как человек может проявляться в отношениях и какие особенности его характера могут влиять на взаимодействие.</p>
+          <p>Чтобы не тратить месяцы и годы на людей, с которыми вам изначально сложно быть в близости.</p>
+        </article>
+        <article>
+          <span class="ph-ic">💞</span>
+          <h3>Лучше понимать партнёра</h3>
+          <ul class="ph-qs"><li>Почему он реагирует именно так?</li><li>Почему ему сложно говорить о чувствах?</li><li>Почему одному человеку нужна близость, а другому — пространство?</li></ul>
+          <p>Физиогномика не даст готовых ответов на все вопросы о человеке, но поможет замечать больше деталей и глубже наблюдать за его проявлениями.</p>
+        </article>
+        <article>
+          <span class="ph-ic">🌿</span>
+          <h3>Познать себя</h3>
+          <p>Мы будем смотреть не только на других.</p>
+          <p>Собственное лицо становится зеркалом для исследования себя: своих особенностей, привычных способов реагирования, сильных сторон и того, как вы проявляетесь рядом с другими.</p>
+        </article>
+        <article>
+          <span class="ph-ic">✨</span>
+          <h3>Раскрывать себя через партнёрство</h3>
+          <p>Отношения — это не только про «найти правильного человека». Это ещё и про то, какой я становлюсь рядом с ним.</p>
+          <ul class="ph-qs"><li>Что во мне раскрывается?</li><li>Где я проявляюсь ярче?</li><li>Где сжимаюсь?</li><li>Что выбираю снова и снова?</li></ul>
+          <p>И здесь физиогномика становится одним из инструментов более глубокого наблюдения за собой и другими.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block ph-love">
+    <div class="wrap ph-love-grid">
+      <div>
+        <p class="eyebrow">💋 Для любви — и не только</p>
+        <h2 class="ph-h2">Этот курс особенно интересен тем, кто сейчас</h2>
+        <ul class="ph-hearts">
+          <li>хочет встретить пару</li>
+          <li>находится в отношениях и хочет лучше понимать партнёра</li>
+          <li>хочет перестать повторять один и тот же сценарий выбора</li>
+          <li>хочет научиться замечать особенности людей раньше</li>
+          <li>хочет глубже понимать собственную привлекательность и проявленность</li>
+          <li>хочет лучше коммуницировать и строить близость</li>
+        </ul>
+      </div>
+      <aside class="ph-pro">
+        <p class="eyebrow">И да — в работе тоже</p>
+        <p>Этот инструмент может быть полезен и в профессиональной сфере.</p>
+        <p>Если вы <b>психолог, коуч, HR, руководитель</b> или другой специалист, который работает с людьми, наблюдательность и умение замечать особенности человека могут стать дополнительным инструментом в вашей работе.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block ph-program" id="ph-program">
+    <div class="wrap">
+      <div class="block-h"><p class="eyebrow">🔎 Программа</p><h2>10 занятий — 10 шагов к тому, чтобы видеть человека глубже</h2></div>
+      <ol class="ph-steps">
+        <li><span class="n">01</span><div><h3>Темперамент</h3><p class="qq">С чего вообще начинается человек?</p><p>Разберём природную динамику человека: насколько он активен, быстр, эмоционален, устойчив или осторожен в реакциях. Это помогает лучше понимать, как человек проживает события, проявляет себя в отношениях и реагирует на окружающий мир.</p></div></li>
+        <li><span class="n">02</span><div><h3>Шея</h3><p class="qq">Как человек встречается с новым и неизвестным?</p><p>В физиогномическом подходе шея связана с отношением к новизне, смелостью, решительностью и готовностью двигаться вперёд. Посмотрим, как человек может проявляться, когда жизнь требует изменений, риска или выхода из привычного.</p></div></li>
+        <li><span class="n">03</span><div><h3>Подбородок</h3><p class="qq">Можно ли на него опереться?</p><p>Подбородок рассматривается как зона, связанная с волей, внутренней опорой и способностью отстаивать своё. Поговорим о том, как проявляется решительность, способность держать слово, доводить начатое до конца и выдерживать давление обстоятельств.</p></div></li>
+        <li><span class="n">04</span><div><h3>Губы и рот</h3><p class="qq">Как человек любит, чувствует и разговаривает о важном?</p><p>Эта зона особенно интересна для понимания эмоционального выражения и коммуникации. Разберём, как человек может проявлять чувства, насколько ему легко говорить о желаниях и потребностях и как он взаимодействует с близкими.</p></div></li>
+        <li><span class="n">05</span><div><h3>Щёки и скулы</h3><p class="qq">Как человек проявляет себя среди людей?</p><p>Рассмотрим особенности этой зоны в контексте социального поведения, эмоциональной наполненности и взаимодействия с окружающими.</p><p>Это поможет обратить внимание на то, как человек проявляет себя в контакте, насколько ему важны признание, влияние, поддержка и ощущение своего места среди других.</p></div></li>
+        <li><span class="n">06</span><div><h3>Нос</h3><p class="qq">Как человек реализует себя и чего хочет от жизни?</p><p>В физиогномической традиции нос связывают с волевыми проявлениями, амбициями, самостоятельностью и способом взаимодействия с материальной стороной жизни. Посмотрим, как человек может проявлять инициативу, добиваться своего, распоряжаться ресурсами и строить отношения с миром.</p></div></li>
+        <li><span class="n">07</span><div><h3>Глаза</h3><p class="qq">Что происходит внутри человека?</p><p>Глаза — одна из самых выразительных зон лица, и мы будем учиться замечать форму, размер, посадку и особенности взгляда. Разберём, как через эту зону наблюдать эмоциональность, восприимчивость, открытость и особенности контакта с другими людьми.</p></div></li>
+        <li><span class="n">08</span><div><h3>Брови и лоб</h3><p class="qq">Как человек думает и принимает решения?</p><p>Эта зона связана в физиогномическом подходе с интеллектуальной активностью, способом обработки информации и выражением мыслей. Поговорим о том, как человек может анализировать, планировать, принимать решения и взаимодействовать с информацией.</p></div></li>
+        <li><span class="n">09</span><div><h3>Уши</h3><p class="qq">Как человек воспринимает окружающий мир?</p><p>Разберём форму, размер, расположение и особенности ушей и то, как они рассматриваются в физиогномическом подходе. Особое внимание уделим теме восприятия, способности слышать другого, принимать информацию и оставаться в контакте со своим внутренним миром.</p></div></li>
+        <li class="last"><span class="n">10</span><div><h3>Профайлинг психотипов</h3><p class="qq">И вот здесь всё собирается в одну картину.</p><p>Мы объединим знания всех предыдущих занятий и посмотрим, как разные признаки сочетаются между собой и какие особенности психотипа могут проявляться в поведении человека. Это финальный шаг от «я вижу отдельную черту» к «я умею наблюдать человека целостно».</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block ph-imagine">
+    <div class="wrap ph-narrow">
+      <p class="eyebrow">👩‍❤️‍👨 А теперь представьте…</p>
+      <p class="ph-big">Вы знакомитесь с человеком.</p>
+      <p>Вместо того чтобы сразу додумывать за него: <i>«Он точно такой…»</i> — вы начинаете наблюдать.</p>
+      <p class="ph-stack">Слышать, что он говорит.<br>Замечать, как проявляется.<br>Видеть особенности.<br>Сопоставлять.</p>
+      <p>И самое главное — замечать:</p>
+      <blockquote class="ph-quote">«А какая Я рядом с этим человеком?»</blockquote>
+      <p>Потому что иногда главный вопрос не <i>«Подходит ли он мне?»</i>, а:</p>
+      <blockquote class="ph-quote big">«Нравится ли мне та версия меня, которая появляется рядом с ним?»</blockquote>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="ph-not">
+        <p class="eyebrow">🧠 Важно</p>
+        <h2 class="ph-h2">Физиогномика — не про гадание по лицу</h2>
+        <div class="ph-not-grid">
+          <p>Мы не будем определять человека по одной черте. Один нос не расскажет вам всю историю человека.</p>
+          <p>Мы будем учиться смотреть на совокупность признаков, их сочетания и контекст.</p>
+          <p>Это не диагностика личности и не способ выносить человеку вердикт.</p>
+          <p><b>Это навык наблюдения</b>, который помогает задавать больше вопросов и видеть больше нюансов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block ph-format">
+    <div class="wrap">
+      <div class="block-h"><p class="eyebrow">🎥 Как проходит обучение</p><h2>Формат</h2></div>
+      <div class="ph-tiles">
+        <div><span>⏱</span><b>10 занятий</b><small>по 2 часа</small></div>
+        <div><span>💻</span><b>Онлайн</b><small>из любой точки мира</small></div>
+        <div><span>👥</span><b>Мини-группа</b><small>4–5 человек</small></div>
+        <div><span>📅</span><b>Старт</b><small>14 октября</small></div>
+        <div><span>🎬</span><b>Запись</b><small>каждого занятия</small></div>
+        <div><span>♾️</span><b>Навсегда</b><small>записи остаются у вас</small></div>
+      </div>
+      <p class="ph-note">Мини-группа уже практически сформирована — поэтому сейчас есть возможность присоединиться буквально к 1–2 участникам.</p>
+      <div class="ph-why">
+        <h3>❤️ Почему именно мини-группа?</h3>
+        <p>Потому что физиогномику невозможно освоить только через теорию. Нужно смотреть, обсуждать, сравнивать, задавать вопросы и тренировать глаз.</p>
+        <p>Поэтому группа небольшая — чтобы было пространство для практики и живого взаимодействия.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block ph-author">
+    <div class="wrap ph-author-grid">
+      <figure class="ph-photo"><img src="https://i.postimg.cc/y8K2jFPb/photo-2026-10-01-13-23-51.jpg" alt="Анна Курявская" loading="lazy" onerror="this.remove()"><span>АК</span></figure>
+      <div>
+        <p class="eyebrow">👩‍🏫 Кто ведёт курс?</p>
+        <h2 class="ph-h2">Анна Курявская</h2>
+        <p class="ph-roles">Психолог • физиогномист • специалист по системным расстановкам • супервизор</p>
+        <p>Я люблю соединять глубину психологии с простыми инструментами, которые помогают человеку лучше понимать себя и свои отношения.</p>
+        <p>И этот курс для меня не только про лицо.</p>
+        <p class="ph-about">Он про людей. Про близость. Про выбор. Про любовь.</p>
+        <p>Про возможность смотреть на другого человека внимательнее — и одновременно лучше видеть себя.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ph-manifest">
+    <div class="wrap ph-narrow">
+      <p class="ph-big">💫 Возможно, вам не нужно ещё больше знать о мужчинах.</p>
+      <p class="ph-big accent">Возможно, вам нужно научиться лучше их видеть.</p>
+      <p>И лучше видеть себя рядом с ними.</p>
+      <ul class="ph-so">
+        <li>Чтобы выбирать отношения не только из химии и влюблённости.</li>
+        <li>Чтобы замечать то, что раньше пропускали.</li>
+        <li>Чтобы не пытаться переделать человека под себя.</li>
+        <li>Чтобы понимать, где действительно есть контакт, а где вы снова пытаетесь построить близость там, где её может быть сложно создать.</li>
+      </ul>
+      <p class="ph-final">Любовь не отменяет осознанность.<br>Она становится глубже, когда мы начинаем видеть.</p>
+    </div>
+  </section>
+
+  <section class="block ph-sum">
+    <div class="wrap">
+      <div class="ph-sum-card">
+        <h2>Физиогномика</h2>
+        <p class="ph-sub">Курс о том, как видеть человека. Понимать себя. И выбирать отношения осознаннее.</p>
+        <p class="ph-sum-facts">Старт — 14 октября<br>10 занятий • онлайн • мини-группа • записи навсегда</p>
+        <p class="ph-seats"><i></i>Осталось 1–2 места</p>
+        <a class="ph-cta" href="https://t.me/anna_kuriavska_psy" target="_blank" rel="noopener">Хочу в группу →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block ph-price" id="ph-price">
+    <div class="wrap">
+      <div class="block-h"><p class="eyebrow">💰 Стоимость курса</p><h2>Сколько стоит?</h2></div>
+      <div class="ph-prices">
+        <article class="ph-pc">
+          <p class="eyebrow">Полная стоимость</p>
+          <p class="amt">$400</p>
+          <p>Это стоимость всех 10 занятий по 2 часа.</p>
+          <p class="ph-parts">💳 <b>Можно оплатить частями.</b> Если вам удобнее рассрочка/поэтапная оплата, общая стоимость курса составляет $400.</p>
+        </article>
+        <article class="ph-pc best">
+          <p class="eyebrow">🔥 При оплате всего курса сразу</p>
+          <p class="amt">$300</p>
+          <p class="save">Выгода $100</p>
+        </article>
+      </div>
+      <div class="ph-incl">
+        <h3>В стоимость входит</h3>
+        <ul>
+          <li>10 онлайн-занятий по 2 часа</li>
+          <li>Практика и разборы</li>
+          <li>Запись каждого занятия</li>
+          <li>Доступ к записям навсегда</li>
+          <li>Обучение в мини-группе</li>
+          <li>Финальное занятие по профайлингу психотипов</li>
+        </ul>
+      </div>
+      <div class="ph-book">
+        <p class="ph-sum-facts">Старт — 14 октября<br>Основная группа уже сформирована. Осталось всего 1–2 места.</p>
+        <p class="ph-final">❤️ Выбирайте не только глазами. Учитесь видеть глубже.</p>
+        <a class="ph-cta" href="https://t.me/anna_kuriavska_psy" target="_blank" rel="noopener">Забронировать место →</a>
+        <p class="ph-contact">Telegram: @anna_kuriavska_psy · Viber: +380 99 447 84 49</p>
+      </div>
+    </div>
+  </section>
+</main>
+
 <button class="mcta off" id="mcta" data-scroll="final" aria-label="Хочу в круиз">Хочу в круиз →</button>
 <footer><div class="wrap">© 2026 · Анна Курявская, психолог</div></footer>
 
 <script>
 (function(){
-  var home=document.getElementById('view-home'), cruise=document.getElementById('view-cruise');
+  var home=document.getElementById('view-home'), cruise=document.getElementById('view-cruise'), physio=document.getElementById('view-physio');
+  var views={home:home,cruise:cruise,physio:physio};
   var navBtns=document.querySelectorAll('.nav button');
   function show(view, anchor){
-    var c = view==='cruise';
-    home.hidden=c; cruise.hidden=!c;
-    navBtns.forEach(function(b){ b.classList.toggle('on', c ? b.dataset.go==='cruise' : (b.dataset.anchor===(anchor||'about'))); });
+    if(!views[view]) view='home';
+    Object.keys(views).forEach(function(k){ views[k].hidden = k!==view; });
+    navBtns.forEach(function(b){ b.classList.toggle('on', view!=='home' ? b.dataset.go===view : (b.dataset.go==='home' && b.dataset.anchor===(anchor||'about'))); });
     if(anchor){ var el=document.getElementById(anchor); if(el){ el.scrollIntoView({behavior:'smooth',block:'start'}); return; } }
     window.scrollTo({top:0});
   }
   document.addEventListener('click',function(e){
     var g=e.target.closest('[data-go]');
-    if(g){ show(g.dataset.go, g.dataset.anchor); try{ history.replaceState(null,'', g.dataset.go==='cruise' ? '#cruise' : '#'); }catch(_){} return; }
+    if(g){ show(g.dataset.go, g.dataset.anchor); try{ history.replaceState(null,'', g.dataset.go==='home' ? '#' : '#'+g.dataset.go); }catch(_){} return; }
     var s=e.target.closest('[data-scroll]');
     if(s){ document.getElementById(s.dataset.scroll).scrollIntoView({behavior:'smooth'}); }
   });
-  show(location.hash==='#cruise' ? 'cruise' : 'home');
+  show((location.hash||'#home').slice(1));
 
   // Маршрут: переход к дню
   document.getElementById('rline').addEventListener('click',function(e){
